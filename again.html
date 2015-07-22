@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<title>端午节包粽子</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="description" content="端午节包粽子" />
+	<link rel="stylesheet" type="text/css" href="css/again.css" />
+</head>
+<body>
+	<section id="Wrap" class="Wrap">
+		<i id="words" class="words"></i>
+		<section id="tryWrap" class="tryWrap">
+			<a href="javascript:;" id="tryagain" class="tryagain"></a>
+			<a href="javascript:;" id="tryagain2" class="tryagain2"></a>
+		</section>
+	</section>
+	<script src="dest/js/all.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript">
+		wx.onMenuShareTimeline({
+		    title: '百度外卖端午节', // 分享标题
+		    link: 'http://h5uploadimg.sinaapp.com/index.html?_wv=1&data1=1', // 分享链接
+		    imgUrl: '', // 分享图标
+		    success: function () { 
+		        alert('aaa');
+		    },
+		    cancel: function () { 
+				alert('bbb');
+		    }
+		});
+	</script>
+</body>
+</html> 

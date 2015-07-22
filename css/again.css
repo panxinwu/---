@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/*===================
+		样式重置
+	===================*/
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+img {
+  border: 0 none;
+  vertical-align: top;
+}
+i,
+em {
+  font-style: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+input,
+select,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-family: inherit;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+html,
+body {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+  height: 100%;
+  font-size: 12px;
+  font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;
+  line-height: 1.5;
+  color: #666;
+  -webkit-text-size-adjust: 100% !important;
+  -webkit-user-select: none;
+  user-select: none;
+  background: transparent;
+  overflow: hidden;
+}
+input[type="text"],
+textarea {
+  -webkit-appearance: none;
+}
+.hide {
+  display: none;
+}
+.Wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f4f2e6 url('../img/bg.png');
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+.Wrap .words {
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  background: url('../img/songda.png') no-repeat;
+  background-size: 16rem 9.775rem;
+  width: 16rem;
+  height: 9.775rem;
+  display: block;
+  background-position: 0 0;
+}
+.Wrap .tryagain {
+  position: absolute;
+  left: 50%;
+  margin-left: -3.7rem;
+  bottom: 5rem;
+  background: url('../img/again.png') no-repeat;
+  background-size: 7.4rem 2.95rem;
+  width: 7.4rem;
+  height: 2.95rem;
+  display: block;
+  background-position: 0 0;
+}
+.Wrap .tryagain2 {
+  position: absolute;
+  left: 50%;
+  margin-left: -4.6rem;
+  bottom: 1rem;
+  background: url('../img/nuomi.png') no-repeat;
+  background-size: 9.275rem 3.025rem;
+  width: 9.275rem;
+  height: 3.025rem;
+  display: block;
+  background-position: 0 0;
+}

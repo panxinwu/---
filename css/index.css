@@ -1,0 +1,937 @@
+@charset "UTF-8";
+/*===================
+		样式重置
+	===================*/
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+img {
+  border: 0 none;
+  vertical-align: top;
+}
+i,
+em {
+  font-style: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+input,
+select,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-family: inherit;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+html,
+body {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+  height: 100%;
+  font-size: 12px;
+  font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;
+  line-height: 1.5;
+  color: #666;
+  -webkit-text-size-adjust: 100% !important;
+  -webkit-user-select: none;
+  user-select: none;
+  background: transparent;
+  overflow: hidden;
+}
+input[type="text"],
+textarea {
+  -webkit-appearance: none;
+}
+.audio_ico {
+  position: absolute;
+  top: .4rem;
+  z-index: 5;
+  width: 2.58rem;
+  height: 1.175rem;
+  right: .2rem;
+  background: url('../img/audio_icon.png') no-repeat;
+  background-size: 2.58rem 1.175rem;
+}
+.audio_ico_stop {
+  background: url('../img/audio_icon_stop.png') no-repeat;
+  background-size: 1.175rem 1.175rem;
+  width: 1.18rem;
+  height: 1.175rem;
+}
+.loaded .audio_ico {
+  opacity: 1!important;
+}
+.mp_loading {
+  z-index: 999!important;
+}
+.hide {
+  display: none;
+}
+.loadingAni {
+  -webkit-animation: loadingAnimate ease-out 1s 0 forwards;
+}
+.loading {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f4f2e6 url('../img/bg.png');
+  background-size: 100% 100%;
+}
+.loading .loadingInner {
+  margin-top: 13rem;
+  position: relative;
+}
+.loading .loadingInner .talkWrap {
+  position: absolute;
+  left: 50%;
+  margin-left: -4.6rem;
+  top: -4.5rem;
+  background: url('../img/talk.png') no-repeat;
+  background-size: 9.4rem 25.5rem;
+  width: 9.4rem;
+  height: 3.95rem;
+  display: block;
+  background-position: 0 -21.175rem;
+}
+.loading .loadingInner .loadingimg {
+  margin: 0 auto;
+  background: url('../img/loadingimg.png') no-repeat;
+  background-size: 27.5rem 2.75rem;
+  width: 2.5rem;
+  height: 2.75rem;
+  display: block;
+  background-position: 0 0;
+}
+.loading .loadingInner .percent {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  width: 100%;
+  display: block;
+  color: #C68E5F;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f4f2e6 url('../img/bg.png');
+  background-size: 100% 100%;
+}
+.container .tips_icon {
+  background: url('../img/tips.png');
+  background-size: 45rem 7.5rem;
+  display: block;
+  background-position: -1000rem -1000rem;
+}
+.container .page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container .page .lhand {
+  background: url('../img/lhand.png');
+  background-size: 100% 100%;
+  width: 9rem;
+  height: 17.375rem;
+  overflow: hidden;
+  position: absolute;
+  left: -2.375rem;
+  top: 16rem;
+  z-index: 3;
+}
+.container .page .rhand {
+  background: url('../img/rhand.png');
+  background-size: 100% 100%;
+  width: 9rem;
+  height: 17.375rem;
+  overflow: hidden;
+  position: absolute;
+  right: -2.375rem;
+  top: 16rem;
+  z-index: 3;
+}
+.container .page .lhandAni {
+  -webkit-animation: lhandAnimate ease 1s 0 forwards;
+}
+.container .page .lhandzzAni {
+  -webkit-animation: lhandzzAnimate ease 1s 0 forwards;
+}
+.container .page .lhandxzAni {
+  -webkit-animation: lhandxzAnimate ease 1s 0 forwards;
+}
+.container .page .rhandxzAni {
+  -webkit-animation: rhandxzAnimate ease 1s 0 forwards;
+}
+.container .page .zzlhandAni {
+  -webkit-animation: zzlhandAnimate ease 1s 0 forwards;
+}
+.container .page .rhandAni {
+  -webkit-animation: rhandAnimate ease 1s 0 forwards;
+}
+.container .page .zzsuccOutAni {
+  -webkit-animation: tinRightOut ease 1s 0 forwards;
+}
+.container .page .zzsuccInAni {
+  -webkit-animation: tinRightIn ease 2s 0 forwards;
+}
+.container .page .lhandOutAni {
+  -webkit-animation: lhandOutAnimate ease 1s 0 forwards;
+}
+.container .page .rhandOutAni {
+  -webkit-animation: rhandOutAnimate ease 1s 0 forwards;
+}
+.container .page .shareBtnAni {
+  -webkit-animation: shareBtnAnimate ease 1.5s 0 forwards;
+}
+.container .page .postWordAni {
+  -webkit-animation: postWordAnimate ease 1.5s 0 forwards;
+}
+.container .page .yeziWrap {
+  background: url('../img/yezi.png');
+  background-size: 100% 100%;
+  width: 14.525rem;
+  height: 3.325rem;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -7.25rem;
+  top: 8.65rem;
+}
+.container .page .fodderWrap {
+  position: absolute;
+  left: 0;
+  padding-left: 50%;
+  margin-left: -1.7rem;
+  top: 11rem;
+  z-index: 2;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.5s;
+}
+.container .page .fodderWrap .fodder {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 55rem;
+}
+.container .page .fodderWrap .fodder .list {
+  float: left;
+  margin-right: 4rem;
+  position: relative;
+}
+.container .page .fodderWrap .fodder .list i {
+  width: 4rem;
+  height: 5rem;
+  display: block;
+}
+.container .page .fodderWrap .fodder .list .xiangItem {
+  background: url('../img/xl_x.png');
+  background-size: 36rem 5rem;
+}
+.container .page .fodderWrap .fodder .list b {
+  width: 3.75rem;
+  height: 3.75rem;
+  display: block;
+  background-position: -3.75rem 0;
+  position: absolute;
+  right: -3.5rem;
+  top: -2rem;
+  display: none;
+}
+.container .page .fodderWrap .fodder .list .sure_tips {
+  background-position: -3.75rem 0;
+}
+.container .page .fodderWrap .fodder .list .hdItem {
+  background: url('../img/xl_ghz.png');
+  background-size: 45rem 3.5rem;
+  width: 5rem;
+  height: 3.5rem;
+  margin-top: 1.5rem;
+  display: block;
+  overflow: hidden;
+}
+.container .page .fodderWrap .fodder .list .xcItem {
+  background: url('../img/xl_xcz.png');
+  background-size: 29.75rem 5rem;
+  width: 4.25rem;
+  height: 5rem;
+  display: block;
+  overflow: hidden;
+}
+.container .page .fodderWrap .fodder .list .xdItem {
+  background: url('../img/xl_xdz.png');
+  background-size: 38.5rem 4.5rem;
+  width: 5.5rem;
+  height: 4.5rem;
+  margin-top: .5rem;
+  display: block;
+  overflow: hidden;
+}
+.container .page .fodderWrap .fodder .list .zsgzItem {
+  background: url('../img/xl_zsgz.png');
+  background-size: 38.5rem 6.25rem;
+  width: 5.5rem;
+  height: 6.25rem;
+  margin-top: -0.5rem;
+  display: block;
+  overflow: hidden;
+}
+.container .page .fodderWrap .fodder .list .zsgzItem {
+  background: url('../img/xl_zsgz.png');
+  background-size: 38.5rem 6.25rem;
+  width: 5.5rem;
+  height: 6.25rem;
+  margin-top: -0.5rem;
+  display: block;
+  overflow: hidden;
+}
+.container .page .fodderWrap .fodder .list .lssrzItem {
+  background: url('../img/xl_srz.png');
+  background-size: 30rem 4rem;
+  width: 5rem;
+  height: 4rem;
+  margin-top: 1.5rem;
+  display: block;
+  overflow: hidden;
+}
+.container .page .fodderWrap .fodder .list:nth-child(1) {
+  margin-right: 3.2rem;
+  margin-top: .3rem;
+}
+.container .page .fodderWrap .fodder .list:nth-child(1) .xian_tips {
+  background-position: -30rem 0;
+  display: block;
+}
+.container .page .fodderWrap .fodder .list:nth-child(2) {
+  margin-right: 2rem;
+}
+.container .page .fodderWrap .fodder .list:nth-child(2) .xian_tips {
+  background-position: -7.5rem -3.75rem;
+  width: 4rem;
+}
+.container .page .fodderWrap .fodder .list:nth-child(3) {
+  margin-right: 2rem;
+}
+.container .page .fodderWrap .fodder .list:nth-child(3) .xian_tips {
+  background-position: -7.5rem 0;
+}
+.container .page .fodderWrap .fodder .list:nth-child(4) {
+  margin-right: 3.2rem;
+}
+.container .page .fodderWrap .fodder .list:nth-child(4) .xian_tips {
+  background-position: -30rem -3.75rem;
+}
+.container .page .fodderWrap .fodder .list:nth-child(5) {
+  margin-right: 2.5rem;
+  margin-top: -0.6rem;
+}
+.container .page .fodderWrap .fodder .list:nth-child(5) .xian_tips {
+  background-position: 0 -3.75rem;
+}
+.container .page .fodderWrap .fodder .list:nth-child(6) {
+  margin-top: -0.6rem;
+}
+.container .page .fodderWrap .fodder .list:nth-child(6) .xian_tips {
+  background-position: -11.25rem 0;
+}
+.container .page .sureWrap {
+  position: absolute;
+  left: 50%;
+  margin-left: -2.5rem;
+  bottom: 1rem;
+  display: none;
+  z-index: 3;
+}
+.container .page .sureWrap .sure_btn1 {
+  width: 4.85rem;
+  height: 2.95rem;
+  background-position: -15rem -3.75rem;
+  margin-bottom: .625rem;
+}
+.container .page .sureWrap .sure_btn2 {
+  width: 4.85rem;
+  height: 2.95rem;
+  background-position: -22.5rem -3.75rem;
+}
+.container .page .tips_1 {
+  width: 6.575rem;
+  height: 3.75rem;
+  display: block;
+  background-position: -15rem 0;
+  position: absolute;
+  top: 21rem;
+  left: 50%;
+  margin-left: -3.3rem;
+}
+.container .page .zzWrap {
+  position: absolute;
+  left: 50%;
+  margin-left: -3.5rem;
+  top: 3rem;
+  z-index: 1;
+}
+.container .page .zzWrap .zzItem {
+  background: url('../img/zzbg.png');
+  background-size: 72.5rem 8rem;
+  background-position: 0 0;
+  width: 7.25rem;
+  height: 8rem;
+  display: block;
+  overflow: hidden;
+}
+.container .page .zzWrap .zzItem1 {
+  background: url('../img/zzbg.png');
+  background-size: 72.5rem 8rem;
+  background-position: -65.2rem 0;
+  width: 7.25rem;
+  height: 8rem;
+  display: block;
+  overflow: hidden;
+}
+.container .page .zzWrap .zzItem2 {
+  margin-top: 1.5rem;
+  background: url('../img/smilezz.png');
+  background-size: 6.95rem 6.075rem;
+  background-position: 0 0;
+  width: 6.95rem;
+  height: 6.075rem;
+  display: block;
+  overflow: hidden;
+}
+.container .page .zzWrap .tips {
+  position: absolute;
+  top: -1.5rem;
+  right: -2.8rem;
+  background-position: 0 0;
+  width: 3.75rem;
+  height: 3.75rem;
+  display: block;
+}
+.container .page .zzWrap .zzsuccItem {
+  position: absolute;
+  left: 50%;
+  margin-left: -3.5rem;
+  top: 0rem;
+  z-index: 1;
+  width: 7.25rem;
+  height: 8rem;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+}
+.container .page .zzWrap .zzxx_icon_xiang {
+  background-position: -8rem -14.2rem;
+}
+.container .page .zzWrap .zzxx_icon_xcz {
+  background-position: 0 -14.2rem;
+}
+.container .page .zzWrap .zzxx_icon_hdz {
+  background-position: -8rem -7.625rem;
+  height: 6.6rem;
+}
+.container .page .zzWrap .zzxx_icon_xdz {
+  background-position: 0 -7.625rem;
+  height: 6.6rem;
+}
+.container .page .zzWrap .zzxx_icon_zxgzz {
+  background-position: -8rem -0.35rem;
+  height: 7.275rem;
+}
+.container .page .zzWrap .zzxx_icon_lssrz {
+  background-position: 0 -0.35rem;
+  height: 7.275rem;
+}
+.container .page .cloudWrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.container .page .cloudWrap .cloudItem {
+  background-image: url('../img/zzbh1.png');
+  background-size: 100%;
+  width: 16rem;
+  height: 16rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: block;
+  overflow: hidden;
+  background-position: 0 0;
+}
+.container .page .cloudWrap .heziItem {
+  margin: 0 auto;
+  background: url('../img/zzbhani.png');
+  background-size: 86.625rem 9rem;
+  width: 12.375rem;
+  height: 9rem;
+  position: relative;
+  margin-top: 4rem;
+  z-index: 10;
+  display: block;
+  background-position: 0 0;
+}
+.container .page .cloudWrap .heziItem .guangItem {
+  background: url('../img/guang.png');
+  background-size: 176rem 10rem;
+  width: 100%;
+  height: 10rem;
+  position: absolute;
+  left: 0;
+  top: -4rem;
+  z-index: 10;
+  display: block;
+  overflow: hidden;
+  background-position: 0 0;
+}
+.container .page .cloudWrap .share_btn {
+  background-position: -33.75rem 0;
+  width: 7.35rem;
+  height: 3rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.container .page .cloudWrap .postwords1 {
+  background: url('../img/postword1.png');
+  background-size: 16rem 1.825rem;
+  width: 100%;
+  height: 1.825rem;
+  margin-top: 20rem;
+  z-index: 10;
+  display: block;
+  overflow: hidden;
+  background-position: 0 0;
+}
+.container .page .cloudWrap .postWord {
+  margin-top: 1rem;
+  background: url('../img/trymetext.png');
+  background-size: 16rem 2.225rem;
+  display: block;
+  background-position: 0 0;
+  width: 100%;
+  height: 2.225rem;
+  overflow: hidden;
+  z-index: 10;
+}
+.container .page .cloudWrap .postWord .postWordInput {
+  width: 100%;
+  height: 2rem;
+  background: none;
+  border: none;
+  color: #fff194;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  font-size: .75rem;
+  line-height: 2.5rem;
+}
+.container .page .start .startImg {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+}
+.container .page .start .startBtn {
+  width: 6.125rem;
+  height: 2.95rem;
+  background-position: -22.5rem 0;
+  position: absolute;
+  left: 50%;
+  margin-left: -3rem;
+  bottom: 1rem;
+  z-index: 11;
+}
+.container .page .shareWrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.85);
+}
+.container .page .shareWrap .share_icon {
+  background: url('../img/shareicon.png') no-repeat;
+  background-size: 16rem 24.175rem;
+  display: block;
+  background-position: 0 0;
+  wdith: 100%;
+  height: 100%;
+}
+@-webkit-keyframes rhandAnimate {
+  0% {
+    top: 16rem;
+    right: -2.375rem;
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    top: 6rem;
+    right: -3.375rem;
+    -webkit-transform: rotate(-20deg);
+  }
+}
+@keyframes rhandAnimate {
+  0% {
+    right: -2.375rem;
+    top: 16rem;
+    transform: rotate(0deg);
+  }
+  100% {
+    right: -3.375rem;
+    top: 6rem;
+    transform: rotate(-20deg);
+  }
+}
+@-webkit-keyframes lhandAnimate {
+  0% {
+    left: -2.375rem;
+    top: 16rem;
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    left: -1.375rem;
+    -webkit-transform: rotate(15deg);
+    top: 13rem;
+  }
+}
+@keyframes lhandAnimate {
+  0% {
+    left: -2.375rem;
+    top: 16rem;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(15deg);
+    left: -1.375rem;
+    top: 13rem;
+  }
+}
+@-webkit-keyframes lhandxzAnimate {
+  0% {
+    left: -2.375rem;
+  }
+  20% {
+    left: -0.375rem;
+  }
+  50% {
+    left: -7.375rem;
+  }
+  100% {
+    left: -2.375rem;
+  }
+}
+@keyframes lhandxzAnimate {
+  0% {
+    left: -2.375rem;
+  }
+  20% {
+    left: -0.375rem;
+  }
+  50% {
+    left: -7.375rem;
+  }
+  100% {
+    left: -2.375rem;
+  }
+}
+@-webkit-keyframes rhandxzAnimate {
+  0% {
+    right: -2.375rem;
+  }
+  20% {
+    right: -0.375rem;
+  }
+  50% {
+    right: -7.375rem;
+  }
+  100% {
+    right: -2.375rem;
+  }
+}
+@keyframes rhandxzAnimate {
+  0% {
+    right: -2.375rem;
+  }
+  20% {
+    right: -0.375rem;
+  }
+  50% {
+    right: -7.375rem;
+  }
+  100% {
+    right: -2.375rem;
+  }
+}
+@-webkit-keyframes lhandzzAnimate {
+  0% {
+    left: -1.375rem;
+    top: 13rem;
+    -webkit-transform: rotate(15deg);
+  }
+  100% {
+    top: 6rem;
+    left: -3.375rem;
+    -webkit-transform: rotate(20deg);
+  }
+}
+@keyframes lhandzzAnimate {
+  0% {
+    transform: rotate(15deg);
+    left: -1.375rem;
+    top: 13rem;
+  }
+  100% {
+    transform: rotate(20deg);
+    top: 6rem;
+    left: -3.375rem;
+  }
+}
+@-webkit-keyframes zzlhandAnimate {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -6rem;
+  }
+}
+@keyframes zzlhandAnimate {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -6rem;
+  }
+}
+@-webkit-keyframes lhandOutAnimate {
+  0% {
+    left: -2.375rem;
+  }
+  100% {
+    left: -11rem;
+  }
+}
+@keyframes lhandOutAnimate {
+  0% {
+    left: -2.375rem;
+  }
+  100% {
+    left: -11rem;
+  }
+}
+@-webkit-keyframes rhandOutAnimate {
+  0% {
+    right: -2.375rem;
+  }
+  100% {
+    right: -11rem;
+  }
+}
+@keyframes rhandOutAnimate {
+  0% {
+    right: -2.375rem;
+  }
+  100% {
+    right: -11rem;
+  }
+}
+@-webkit-keyframes zzlhandAnimate {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -6rem;
+  }
+}
+@keyframes zzlhandAnimate {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -6rem;
+  }
+}
+@-webkit-keyframes shareBtnAnimate {
+  0% {
+    bottom: -20rem;
+  }
+  100% {
+    bottom: 1rem;
+  }
+}
+@keyframes shareBtnAnimate {
+  0% {
+    bottom: -20rem;
+  }
+  100% {
+    bottom: 1rem;
+  }
+}
+@-webkit-keyframes postWordAnimate {
+  0% {
+    margin-top: 20rem;
+  }
+  100% {
+    margin-top: 1rem;
+  }
+}
+@keyframes postWordAnimate {
+  0% {
+    margin-top: 20rem;
+  }
+  100% {
+    margin-top: 1rem;
+  }
+}
+@-webkit-keyframes tinRightOut {
+  0%,
+  20%,
+  40%,
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1) translateX(0);
+  }
+  10%,
+  30% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1) translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1, 1) translateX(900%);
+  }
+}
+@keyframes tinRightOut {
+  0%,
+  20%,
+  40%,
+  50% {
+    opacity: 1;
+    transform: scale(1, 1) translateX(0);
+  }
+  10%,
+  30% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1, 1) translateX(900%);
+  }
+}
+@-webkit-keyframes tinRightIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1, 1) translateX(900%);
+  }
+  50%,
+  70%,
+  90% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1) translateX(0);
+  }
+  60%,
+  80%,
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1) translateX(0);
+  }
+}
+@keyframes tinRightIn {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1) translateX(900%);
+  }
+  50%,
+  70%,
+  90% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateX(0);
+  }
+  60%,
+  80%,
+  100% {
+    opacity: 1;
+    transform: scale(1, 1) translateX(0);
+  }
+}
+@-webkit-keyframes loadingAnimate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loadingAnimate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 320px) and (max-height: 480px) {
+  html {
+    zoom: .8;
+  }
+  .container .page .tips_1 {
+    top: 19rem;
+  }
+  .postWord {
+    margin-top: .5rem;
+  }
+  .container .page .cloudWrap .heziItem {
+    margin-top: 2rem !important;
+  }
+}

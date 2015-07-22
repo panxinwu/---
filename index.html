@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<title>端午节包粽子</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="description" content="端午节包粽子" />
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=1.3" />
+</head>
+<body>
+	<section id="loading" class="loading">
+		<section class="loadingInner">
+			<i id="talkWrap" class="talkWrap"></i>
+			<i id="loadingimg" class="loadingimg"></i>
+			<i id="percent" class="percent">0%</i>
+		</section>
+	</section>
+	<section id="container" class="container">
+		<script id="template" type="x-tmpl-mustache">
+		<a href="javascript:;" class="audio_ico audio_ico_stop"></a>
+			<section id="page1" class="page page1" >
+				<section id = "start" class="start">
+					<img src="img/start.png" class="startImg" />
+					<a id="startBtn" href="javascript:;" class="tips_icon startBtn"></a>
+				</section>
+				<section id= "lhand" class="lhand"></section>
+				<section id="rhand" class="rhand"></section>
+				<section id="part2" class="part2" style="display:none;opacity:0;">
+					<section id = "yeziWrap" class="yeziWrap"></section>
+					<section id="fodderWrap" class="fodderWrap">
+						<ul id="fodder" class="fodder">
+							<li class="list" data-num = '1'>
+								<i id="xcz" class="xcItem"></i>
+								<b class="tips_icon sure_tips"></b>
+								<b class="tips_icon xian_tips"></b>
+							</li>
+							<li class="list" data-num = '2'>
+								<i id="hdz" class="hdItem"></i>
+								<b class="tips_icon sure_tips"></b>
+								<b class="tips_icon xian_tips"></b>
+							</li>
+							<li class="list" data-num = '3'>
+								<i id="xdz" class="xdItem"></i>
+								<b class="tips_icon sure_tips"></b>
+								<b class="tips_icon xian_tips"></b>
+							</li>
+							<li class="list" data-num = '4'>
+								<i id="xiang" class="xiangItem"></i>
+								<b class="tips_icon sure_tips"></b>
+								<b class="tips_icon xian_tips" style="display:block;"></b>
+							</li>
+							<li class="list" data-num = '5'>
+								<i id="zsgzz" class="zsgzItem"></i>
+								<b class="tips_icon sure_tips"></b>
+								<b class="tips_icon xian_tips"></b>
+							</li>
+							<li class="list" data-num = '6'>
+								<i id="lssrz" class="lssrzItem"></i>
+								<b class="tips_icon sure_tips"></b>
+								<b class="tips_icon xian_tips"></b>
+							</li>
+						</ul>
+					</section>
+					<i id="tishi_tips" class="tips_icon tips_1"></i>
+					<section id="sureWrap" class="sureWrap">
+						<i id="sure_btn1" class="tips_icon sure_btn1"></i>
+						<i id="sure_btn2" class="tips_icon sure_btn2"></i>
+					</section>
+					<section class="zzWrap">
+						<i id="zzItem" class="zzItem"></i>
+						<i id="zzItem1" class="zzItem1" style="display:none;"></i>
+						<i id="zzItem2" class="zzItem2" style="display:none;"></i>
+						<i id="dm_tips" class="tips_icon tips"></i>
+					</section>
+					<section class="cloudWrap" >
+						<i id="cloud" class="cloudItem" style="visibility:hidden;"></i>
+						<i id="hezi" class="heziItem" style="visibility:hidden;"><i id="guang" class="guangItem" style="visibility:hidden;"></i></i>
+						
+						
+						<i id="postwords1" class="postwords1"></i>
+						<i id="postWord" class="postWord"><input id="postWordInput" type="text" class="postWordInput" /></i>
+						<i id="share_btn" class="tips_icon share_btn"></i>
+					</section>
+					<section id="shareWrap" class="shareWrap" style="display:none;">
+					<i class="share_icon"></i>
+					</section>
+				</section>
+			</section>
+		</script>
+	</section>
+	<script type="text/javascript">
+			//全局变量：zzType: 0,1,2,3,4,5 粽子类型 zzText 祝福语
+			var zzType = 0,
+				zzText = '',
+				global = {};
+			function ajaxPost(zzType,zzText){
+				// alert(zzType+ " "+zzText);
+				$.ajax({
+				  type: 'POST',
+				  url:  'http://2015.str.fm/duanwujie/add/',
+				  data: { dataType: zzType, zzText : zzText },
+				  dataType: 'json',
+				  timeout: 300,
+				  context: $('body'),
+				  success: function(data){
+				    // Supposing this JSON payload was received:
+				    //   {"project": {"id": 42, "html": "<div>..." }}
+				    // append the HTML to context object.
+				  },
+				  error: function(xhr, type){
+				  }
+				})
+			}
+
+		window.onload = function(){
+
+
+			$('body').bind("touchmove", function(e) {
+			     e.preventDefault();
+			});
+			wx.onMenuShareTimeline({
+			    title: '百度外卖端午节', // 分享标题
+			    link: 'http://2015.str.fm/duanwujie/add/', // 分享链接
+			    imgUrl: '', // 分享图标
+			    success: function () { 
+			        alert('aaa');
+			    },
+			    cancel: function () { 
+					alert('bbb');
+			    }
+		});
+		}
+	</script>
+	<script src="dest/js/all.js"></script>
+	<script src="js/main.js?V=1.3"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</body>
+</html> 

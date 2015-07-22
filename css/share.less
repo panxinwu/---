@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+	/*===================
+		样式重置
+	===================*/
+		* { -webkit-tap-highlight-color: transparent; outline: 0; margin:0; padding:0; vertical-align:baseline;}
+		body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; vertical-align: baseline; }
+		img { border: 0 none; vertical-align: top; }
+		i, em { font-style: normal; }
+		ol, ul { list-style: none; }
+		input, select, button, h1, h2, h3, h4, h5, h6 { font-size: 100%; font-family: inherit; }
+		table { border-collapse: collapse; border-spacing: 0; }
+		a { text-decoration: none; color: #000; }
+		html,body { margin: 0 auto; min-width: 320px; max-width: 640px; height: 100%;font-size: 12px; font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial; line-height: 1.5; color: #666; -webkit-text-size-adjust: 100% !important; -webkit-user-select: none; user-select: none;background:transparent;overflow: hidden;}
+		input[type="text"],textarea{-webkit-appearance: none;}
+
+@images:'../img';
+// @images:'http://4.h5uploadimg.sinaapp.com/img';
+.loadingAni{-webkit-animation: loadingAnimate ease-out 1s 0 forwards;}
+.loading{overflow:hidden;width:100%;height:100%;position: relative;background:#f4f2e6 url('@{images}/bg.png');background-size:100% 100%;
+  .loadingInner{margin-top:13rem;position: relative;
+    .talkWrap{position:absolute;left:50%;margin-left:-4.6rem;top:-4.5rem;background:url('@{images}/talk.png') no-repeat;background-size:9.4rem 25.5rem;width:9.4rem;height:3.95rem;display:block;background-position:0 0;}
+    .loadingimg{margin:0 auto;background:url('@{images}/loadingimg.png') no-repeat;background-size:27.5rem 2.75rem;width:2.5rem;height:2.75rem;display:block;background-position:0 0;}
+    .percent{margin:0 auto;text-align:center;font-size:1rem;width:100%;display:block;color:#C68E5F;}
+  }
+}
+.hide{display:none;}
+.container{width:100%;height:100%;position: relative;background:#f4f2e6 url('@{images}/bg.png');background-size:100% 100%;overflow:hidden;
+  
+  .zzWrap{margin-top:5rem;
+    .zz_open{margin:0 auto;background:url('@{images}/zzbhani.png') no-repeat;background-size:86.625rem 9rem;width:12.375rem;height:9rem;display:block;background-position:0 0;}
+    .zzwdk1{background:url('@{images}/zzwdk1.png') no-repeat;background-size:100%;display:block;background-position:0 0;width:100%;height:3.675rem;}
+    .zzwdk2{background:url('@{images}/zzwdk2.png') no-repeat;background-size:100% 100%;display:block;background-position:0 0;width:100%;height:3.175rem;}
+  }
+  .openItem{display:block;overflow:hidden;background-image:url('@{images}/hd1.png');background-position:0 0;margin:0 auto;position: absolute;left:50%;margin-left:-8rem;top:1rem;background-size:100%;width:16rem;height:20.5rem;}
+  .tryWrap{position:absolute;left:0;top:40rem;width:100%;overflow: hidden;
+    .wordTips{display:block;width:100%;text-align: center;margin-bottom:.5rem;}
+    .btnWrap{width:13.75rem;overflow: hidden;margin:0 auto;
+      .tryBtn1{float:left;margin-right:.3rem;background:url('@{images}/trymebtn1.png');background-size:6.575rem 2.925rem;width:6.575rem;height:2.935rem;display:block;overflow:hidden;background-position:0 0;}
+  	  .tryBtn2{float:left;background:url('@{images}/trymebtn2.png');background-size:6.575rem 2.925rem;width:6.575rem;height:2.935rem;display:block;overflow:hidden;background-position:0 0;}
+	  }
+    .tryText{margin-bottom:.5rem;background:url('@{images}/trymetext.png') no-repeat;color:#fff194;background-size:100% 100%;width:100%;height:2.225rem;display:block;overflow:hidden;background-position:0 0;padding:0 2rem;line-height:2.5rem;box-sizing: border-box;font-size: .75rem;}
+  }
+  .tryBtnAni{-webkit-animation: tryBtnAnimate ease 1.5s 1s forwards;}
+}
+@-webkit-keyframes tryBtnAnimate{
+  0% {
+    top:40rem;
+  }
+  100% {
+    top:18rem;
+  }
+}
+@keyframes tryBtnAnimate{
+  0% {
+    top:40rem;
+  }
+  100% {
+    top:18rem;
+  }
+}
+//loading 加载完loading浮层消失
+@-webkit-keyframes loadingAnimate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+
+}
+@keyframes loadingAnimate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+

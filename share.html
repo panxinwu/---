@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<title>端午节包粽子</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="description" content="端午节包粽子" />
+	<link rel="stylesheet" type="text/css" href="css/share.css?v=1.1" />
+</head>
+<body>
+	<section id="loading" class="loading">
+		<section class="loadingInner">
+			<i id="talkWrap" class="talkWrap"></i>
+			<i id="loadingimg" class="loadingimg"></i>
+			<i id="percent" class="percent">0%</i>
+		</section>
+	</section>
+	<section id="container" class="container">
+		<script id="template" type="x-tmpl-mustache">
+			<section id="zzWrap" class="zzWrap">
+				<i id="zzwdk1" class="zzwdk1"></i>
+				<i id="zz_open" class="zz_open"></i>
+				<i id="zzwdk2" class="zzwdk2"></i>
+			</section>
+			<i id="openItem" class="openItem" style="display:none;"></i>
+
+			<section id="tryWrap" class="tryWrap">
+				<i id="wordTips" class="wordTips">TA还捎了一句话</i>
+				<i id="tryText" class="tryText"></i>
+				<section class="btnWrap">
+				<a href="index.html" id="tryBtn1" class="tryBtn1"></a>
+				<a href="http://shakeduang.nuomi.com/actcenter/wapshake/landing?actid=12&channel=nuomi_market" id="tryBtn2" class="tryBtn2"></a>
+				</section>
+			</section>
+			<input id="postData" type="hidden" data-zztype='1' data-zztext="便便粽子便便粽子便便粽子便便粽子便便粽子子便便粽子便便粽子"/>
+		</script>
+	</section>
+	<script src="dest/js/share.js"></script>
+	<script src="js/shareModule.js?v=1.4"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript">
+		wx.onMenuShareTimeline({
+		    title: '百度外卖端午节', // 分享标题
+		    link: 'http://h5uploadimg.sinaapp.com/index.html?_wv=1&data1=1', // 分享链接
+		    imgUrl: '', // 分享图标
+		    success: function () { 
+		        alert('aaa');
+		    },
+		    cancel: function () { 
+				alert('bbb');
+		    }
+		});
+	</script>
+</body>
+</html> 
